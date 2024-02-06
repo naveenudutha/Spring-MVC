@@ -36,6 +36,7 @@ public class StudentServiceImpl implements IStudentService {
 		return "record deleted";
 	}
 
+	//to update the student details
 	@Override
 	public StudentBo updateStudent(StudentBo bo) {
 		
