@@ -1,0 +1,28 @@
+package com.naveen.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.naveen.bo.StudentBo;
+import com.naveen.dao.IStudentDao;
+
+@Service
+public class StudentServiceImpl implements IStudentService {
+	
+	private IStudentDao repo;
+	
+
+	@Override
+	public List<StudentBo> getAllStudent() {
+		
+		return (List<StudentBo>) repo.findAll();
+	}
+
+	@Override
+	public StudentBo registerStudent(StudentBo student) {
+		repo.save(student);
+		return null;
+	}
+
+}

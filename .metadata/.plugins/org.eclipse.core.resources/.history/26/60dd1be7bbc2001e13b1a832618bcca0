@@ -1,0 +1,44 @@
+package com.naveen.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.naveen.bo.StudentBo;
+import com.naveen.dao.IStudentDao;
+
+@Service
+public class StudentServiceImpl implements IStudentService {
+	
+	@Autowired
+	private IStudentDao repo;
+	
+
+	@Override
+	public List<StudentBo> getAllStudent() {
+		
+		List<StudentBo> list=(List<StudentBo>)repo.findAll();
+		if(list.isEmpty()) System.out.println("list is empty");
+		return list;
+	}
+
+	@Override
+	public StudentBo registerStudent(StudentBo student) {
+		StudentBo st = repo.save(student);
+		return st;
+	}
+
+	@Override
+	public String deleteStudent(Integer Id) {
+		repo.deleteById(Id);
+		return "record deleted";
+	}
+
+	@Override
+	public StudentBo updateStudent(StudentBo bo) {
+		repo.save(bo);
+		return null;
+	}
+
+}

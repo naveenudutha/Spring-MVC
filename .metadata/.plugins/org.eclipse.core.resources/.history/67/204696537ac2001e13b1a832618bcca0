@@ -1,0 +1,21 @@
+package com.naveen.service;
+
+import java.util.List;
+
+import com.naveen.bo.StudentBo;
+
+public class StudentServiceImpl implements IStudentService {
+
+	@Override
+	public List<StudentBo> getAllStudent() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public StudentBo registerStudent(StudentBo student) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

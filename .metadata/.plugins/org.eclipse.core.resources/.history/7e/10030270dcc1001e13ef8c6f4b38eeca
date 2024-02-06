@@ -1,0 +1,10 @@
+package com.naveen.model;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class CustomerInfo {
+	
+	public 
+
+}

@@ -1,0 +1,18 @@
+package com.naveen.model;
+
+public class Student {
+	
+	private Integer studentId;
+	
+	private String studentName;
+	
+	private String city;
+
+	public Student() {
+		super();
+		System.out.println("student model object zero param constructor");
+	}
+	
+	
+
+}

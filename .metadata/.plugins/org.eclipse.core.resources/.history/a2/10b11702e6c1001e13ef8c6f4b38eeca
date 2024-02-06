@@ -1,0 +1,19 @@
+package com.naveen.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.naveen.service.ICustomerService;
+
+@Controller
+public class CustomerController {
+	@Autowire
+	private ICustomerService service;
+	
+	@GetMapping("/cxlist")
+	public String fetchCustomerData()
+	{
+		return "customerlist";
+	}
+
+}

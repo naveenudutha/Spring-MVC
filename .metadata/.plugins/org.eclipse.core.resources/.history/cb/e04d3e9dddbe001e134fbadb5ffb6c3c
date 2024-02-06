@@ -1,0 +1,17 @@
+package com.telusko.bo;
+
+import lombok.Data;
+import lombok.Getter;
+
+@Data
+public class Student {
+	@Getter
+	private Integer id;
+	
+	private String name;
+	
+	private Integer marks;
+	
+	
+
+}

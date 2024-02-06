@@ -1,0 +1,12 @@
+package com.telusko.controller;
+
+public class Snippet {
+	@RequestMapping("/home")
+	public String someMessage(Model model)
+	{
+		model.addAttribute("name","Naveen Udutha");
+		
+		return "index";
+	}
+}
+

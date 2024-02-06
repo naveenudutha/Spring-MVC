@@ -1,0 +1,23 @@
+package com.telusko.controllers;
+
+import java.util.Map;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.telusko.bo.Student;
+
+@Controller
+@RequestMapping(("/controller1"))
+public class StudentController {
+	
+	@GetMapping("/home")
+	public String sendData(Map<String,Object> model)
+	{
+		Student s=new Student(1,"Naveen",95);
+		model.put("student", s);
+		return "index";
+	}
+
+}

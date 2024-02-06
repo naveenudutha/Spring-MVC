@@ -1,0 +1,7 @@
+package com.naveen.dao;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface IStudentDao extends CrudRepository<T, ID> {
+
+}

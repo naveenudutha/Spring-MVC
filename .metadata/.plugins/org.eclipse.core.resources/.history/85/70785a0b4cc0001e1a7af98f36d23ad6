@@ -1,0 +1,9 @@
+package com.telusko.bo;
+
+public class Employee {
+	
+	private Integer eId;
+	private String eName;
+	private Double salary;
+
+}

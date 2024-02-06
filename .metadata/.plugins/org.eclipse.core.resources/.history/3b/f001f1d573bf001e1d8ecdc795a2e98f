@@ -1,0 +1,27 @@
+package com.naveen.controllers;
+
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.naveen.service.IGrretingService;
+
+@Controller
+@RequestMapping("/controller")
+public class GreetingController {
+	
+	@Autowired
+	public IGrretingService service;
+	
+	@GetMapping("/welcome")
+	public void getGreeting(Map<String,Object> map)
+	{
+		String greet=service.greet();
+		
+		map.put("greet", greet);
+	}
+
+}

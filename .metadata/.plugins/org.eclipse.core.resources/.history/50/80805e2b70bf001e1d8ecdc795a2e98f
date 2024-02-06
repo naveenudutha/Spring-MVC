@@ -1,0 +1,11 @@
+package com.naveen.service;
+
+public class GrretingServiceImpl implements IGrretingService {
+
+	@Override
+	public String greet() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

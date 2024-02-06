@@ -1,0 +1,6 @@
+package com.naveen.controllers;
+
+@Controller
+public class StudentController {
+
+}

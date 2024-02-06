@@ -1,0 +1,13 @@
+package com.naveen.controllers;
+
+import org.springframework.stereotype.Controller;
+
+import com.naveen.service.IGrretingService;
+
+@Controller
+public class GreetingController {
+	
+	@Autowired
+	public IGrretingService service;
+
+}

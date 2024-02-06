@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>CRM Registraion Form</title>
+<link type=text/css rel="stylesheet" href="./css/style.css">
+<link type=text/css rel="stylesheet" href="./css/add-customer-style.css">
+</head>
+<body>
+
+	<div id="wrapper">
+		<div id="header">
+				<h1> Customer Relationship Management Registration Form</h1>
+		
+		</div>
+	</div>
+	
+
+</body>
+</html>

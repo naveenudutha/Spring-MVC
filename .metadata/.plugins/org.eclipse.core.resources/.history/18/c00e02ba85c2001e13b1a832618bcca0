@@ -1,0 +1,39 @@
+package com.naveen.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.naveen.bo.StudentBo;
+import com.naveen.model.StudentModel;
+import com.naveen.service.StudentServiceImpl;
+
+@Controller
+public class StudentController {
+	@Autowired
+	StudentServiceImpl service;
+	
+	
+	@GetMapping("/getStudentList")
+	public String getAllStudent(Model model)
+	{
+		List<StudentBo> list = service.getAllStudent();
+		 model.addAttribute("list",list);
+		 
+		 System.out.println("student list in controller"+list);
+		return"studentlist";
+	}
+	
+	@RequestMapping("/register")
+	public String RegisterStudent(@ModelAttribute("student")StudentModel student,Model model)
+	{
+		
+		return "registrationform";
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.telusko.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller("/skill")
+public class SecondController {
+
+	@GetMapping
+	public String someMessage2()
+	{
+		return "focus";
+	}
+
+}

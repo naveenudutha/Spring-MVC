@@ -1,0 +1,20 @@
+package com.naveen.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.naveen.dao.ICustomerDao;
+import com.naveen.model.CustomerInfo;
+@Service
+public class CustomerServiceImpl implements ICustomerService{
+
+	private ICustomerDao repo;
+	
+	@Override
+	public List<CustomerInfo> getCustomers() {
+		
+		return (List<CustomerInfo>) repo.findAll();
+	}
+
+}

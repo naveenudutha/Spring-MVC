@@ -1,0 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Hello </h2><br>
+<h2>${studnet.getId() }</h2><br>
+<h2>${studnet.get.getName() }</h2><br>
+<h2>${studnet.getMarks() }</h2><br>
+</body>
+</html>
